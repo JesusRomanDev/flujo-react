@@ -15,4 +15,6 @@
 -Si se le pasa por props al hijo y el hijo de modifica(alguna funcion modificadora) ese props causa que se re renderize el padre junto con su hijo
 
 
--El useEffect a pesar de tener dependencias, siempre que se carga el componente este se ejecuta, ya despues solo cuando las dependencias cambien, tambien el useEffect se ejecuta hasta el final igual que las funciones modificadoras
+-El useEffect a pesar de tener dependencias, siempre que se carga el componente POR PRIMERA VEZ este se ejecuta, ya despues solo cuando las dependencias cambien, tambien el useEffect se ejecuta hasta el final igual que las funciones modificadoras, ejemplo
+
+si tenemos un setSaludo('adios') y en otro componente tenemos un useEffect que escucha la dependecia [saludo], la funcion modificadora tiene prioridad, una vez re renderizado todo lo que debe ser (osease todo lo que afecto) ahora si el useEffect se ejecuta
