@@ -18,7 +18,6 @@
 -El useEffect a pesar de tener dependencias, siempre que se carga el componente POR PRIMERA VEZ este se ejecuta, ya despues solo cuando las dependencias cambien, tambien el useEffect se ejecuta hasta el final igual que las funciones modificadoras, ejemplo
 
 si tenemos un setSaludo('adios') y en otro componente tenemos un useEffect que escucha la dependecia [saludo], la funcion modificadora tiene prioridad, una vez re renderizado todo lo que debe ser (osease todo lo que afecto) ahora si el useEffect se ejecuta
--El useEffect a pesar de tener dependencias, siempre que se carga el componente este se ejecuta, ya despues solo cuando las dependencias cambien, tambien el useEffect se ejecuta hasta el final igual que las funciones modificadoras
 
 -Si en algun evento llamamos a una funcion y dentro de esa funcion se ejecuta codigo y no existe alguna funcion modificadora entonces el COMPONENTE NO SE RENDERIZA, porque no hay necesidad, por ejemplo
         <button onClick={testing}>Click para testing de funcion</button>
